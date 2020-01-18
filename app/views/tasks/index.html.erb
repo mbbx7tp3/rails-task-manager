@@ -2,12 +2,7 @@
 
 <% @tasks.each do |task| %>
 
-<li>  <%= link_to task.title, task_path(task) %>
-  <% if task.completed %>
-   ✔️
-  <% else %>
-  ✖️
-  <% end %>
+<li>  <%= link_to task.title, task_path(task)%> Completed <%= task.completed %>
 </li>
 <p> <%= link_to "Remove Task", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %> </p>
 <% end %>

@@ -3,9 +3,7 @@
   <%= f.text_field :title %>
   <%= f.label :details, "What do you need to do?" %>
   <%= f.text_field :details %>
+  <%= f.submit %>
   <%= f.label :completed %>
   <%= f.check_box :completed %>
-  <%= f.submit %>
 <% end %>
-
-<%= link_to "back to all tasks", tasks_path %>
