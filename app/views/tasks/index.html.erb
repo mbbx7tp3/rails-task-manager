@@ -9,7 +9,7 @@
   ✖️
   <% end %>
 </li>
-<p> <%= link_to "Remove Task", task_path(task), method: :delete %> </p>
+<p> <%= link_to "Remove Task", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %> </p>
 <% end %>
 
 <p> <%= link_to "➕Add a new Task", new_path %> </p>
