@@ -1,0 +1,13 @@
+<h1> Create a task </h1>
+
+<% @task = Task.new  %>
+
+<%= form_for @task do |f| %>
+  <%= f.label :title, "What is your task?" %>
+  <%= f.text_field :title %>
+  <%= f.label :details, "What do you need to do?" %>
+  <%= f.text_field :details %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "back to all tasks", tasks_path %>
