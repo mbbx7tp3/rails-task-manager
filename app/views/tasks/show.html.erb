@@ -1,7 +1,10 @@
-<h1>  <%= @task.title %></h1>
+<h1> What do I need to do: <br> <%= @task.title %></h1>
 
-<p> <%= @task.details %></p>
+<div class="container">
+<p> What does this involve: <%= @task.details %></p>
+</div>
+<div class="button-group">
+<p type="button" class="btn"> <%= link_to "edit tasks", edit_path %> </p>
 
-<%= link_to "edit tasks", edit_path %>
-
-<%= link_to "back to all tasks", tasks_path %>
+<p type="button" class="btn"> <%= link_to "back to all tasks", tasks_path %> </p>
+</div>

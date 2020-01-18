@@ -2,11 +2,14 @@
 
 <% @tasks.each do |task| %>
 
-<li>  <%= link_to task.title, task_path(task)%> Completed <%= task.completed %>
+<div class="container"> <li class="list-group"> <%= link_to task.title, task_path(task)%> Completed <%= task.completed %>
 </li>
+<p> <%= link_to "Mark as complete / edit task", edit_path(task) %>
 <p> <%= link_to "Remove Task", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %> </p>
+</div>
 <% end %>
 
+<div class="container">
 <p> <%= link_to "➕Add a new Task", new_path %> </p>
-
+</div>
 

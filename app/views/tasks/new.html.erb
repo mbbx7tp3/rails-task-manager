@@ -1,5 +1,5 @@
 <h1> Create a task </h1>
-
+<div class="button-group">
 <% @task = Task.new  %>
 
 <%= form_for @task do |f| %>
@@ -9,5 +9,9 @@
   <%= f.text_field :details %>
   <%= f.label :completed%>
   <%= f.check_box :completed %>
+  <br>
+  <div class="button-group">
   <%= f.submit %>
+  </div>
 <% end %>
+</div>
